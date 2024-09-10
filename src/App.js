@@ -1,5 +1,5 @@
 import React from "react";
-// import "./App.css";
+import { useState } from "react";
 
 function App() {
   return (
@@ -21,21 +21,39 @@ export default App;
 function Header() {
   return (
     <header className="google-header">
-      <div className="google-logo">
-        {/* <img
-      src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png"
-      alt="Google Logo"
-    /> */}
-      </div>
+      <div className="google-logo"></div>
       <div className="google-menu">
-        <span>Gmail</span>
-        <span>Images</span>
+        <span>
+          <a href="https://mail.google.com/mail/&ogbl">Gmail</a>
+        </span>
+        <span>
+          <a href="https://www.google.com/imghp?hl=en&ogbl">Images</a>
+        </span>
+        <span title="Search Labs">
+          <i className="fa-solid fa-flask"></i>
+        </span>
+        <span title="Google Apps">
+          <i className="fa-solid fa-grip"></i>
+        </span>
+        <span title="Google Account">
+          <i className="fa-solid fa-circle-user"></i>
+        </span>
       </div>
     </header>
   );
 }
 
 function SearchBox() {
+  const [input, setInput] = useState("");
+
+  function handleInput(value) {
+    setInput(value);
+  }
+
+  function handleClearInput() {
+    setInput("");
+  }
+
   return (
     <section className="google-body">
       <img
@@ -43,12 +61,35 @@ function SearchBox() {
         src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png"
         alt="Google Logo"
       />
+
       <div className="search-box">
-        <input
-          type="text"
-          className="search-input"
-          placeholder="Search Google or type a URL"
-        />
+        <div className="Input-container">
+          <span className="searchIcon">
+            <i className="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <input
+            type="text"
+            className="search-input"
+            value={input}
+            onChange={(e) => handleInput(e.target.value)}
+          />
+          {input && (
+            <span
+              className="extra-icons clear-icon"
+              title="Clear"
+              onClick={handleClearInput}
+            >
+              <i className="fa-solid fa-xmark"></i>
+            </span>
+          )}
+          <span className="extra-icons" title="Search by voice">
+            <i className="fa-solid fa-microphone"></i>
+          </span>
+          <span className="extra-icons" title="Search by image">
+            <i className="fa-solid fa-camera"></i>
+          </span>
+        </div>
+
         <div className="search-buttons">
           <button>Google Search</button>
           <button>I'm Feeling Lucky</button>

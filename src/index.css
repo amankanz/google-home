@@ -23,13 +23,33 @@ body {
 .google-header {
   display: flex;
   justify-content: flex-end;
-  padding: 10px 20px;
+  padding: 20px 20px;
+  font-size: 13px;
 }
 
 .google-menu span {
   margin-left: 20px;
   color: white;
   cursor: pointer;
+}
+.google-menu span a {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.google-menu span:nth-child(n + 3) {
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: all linear 0.2s;
+
+  &:hover {
+    background-color: #303134;
+  }
 }
 
 .google-body {
@@ -51,18 +71,41 @@ body {
   align-items: center;
 }
 
-.search-input {
-  width: 580px;
-  padding: 15px;
-  border-radius: 25px;
+.Input-container {
   border: 1px solid #dfe1e5;
+  border-radius: 25px;
+
+  &:hover {
+    background-color: #303134;
+  }
+}
+
+.search-input {
+  width: 470px;
+  padding: 15px;
+  border-style: none;
   background-color: transparent;
+  color: #fff;
   outline: none;
   font-size: 16px;
 }
 .search-input:focus {
   background-color: #303134;
   color: #fff;
+}
+.searchIcon {
+  padding: 15px;
+  font-size: 16px;
+  border-style: none;
+  cursor: pointer;
+}
+.extra-icons {
+  padding: 5px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.clear-icon {
+  border-right: 1px solid #dfe1e5;
 }
 
 .search-buttons {
@@ -81,10 +124,11 @@ body {
 
 .language-options {
   margin-top: 20px;
+  font-size: 13px;
 }
 
 .language-options a {
-  color: #1a73e8;
+  color: #99c3ff;
   margin-right: 10px;
   text-decoration: none;
   font-size: 14px;
@@ -102,6 +146,7 @@ body {
   margin-left: 15px;
   color: #8ab4f8;
   text-decoration: none;
+  font-size: 14px;
 }
 
 .google-footer a:hover {
