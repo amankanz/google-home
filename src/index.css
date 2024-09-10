@@ -58,10 +58,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10rem;
 }
 
 .google-logo-main {
-  width: 272px;
+  width: 17rem;
   margin-bottom: 30px;
 }
 
@@ -136,19 +137,95 @@ body {
 
 .google-footer {
   display: flex;
-  justify-content: space-between;
-  background-color: #202124;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  background-color: #171717;
   color: #9aa0a6;
-  padding: 15px 20px;
 }
 
 .google-footer a {
-  margin-left: 15px;
-  color: #8ab4f8;
+  margin-left: 1.2rem;
+  color: #fff;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .google-footer a:hover {
   text-decoration: underline;
+}
+
+.footer-up {
+  padding: 1.2rem;
+}
+
+.footer-down {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 1rem 1rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .google-logo-main {
+    width: 10rem;
+  }
+
+  .search-input {
+    width: 15rem;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .extra-icons,
+  .searchIcon {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .google-menu span {
+    margin-left: 5px;
+  }
+  .google-menu span:nth-child(n + 3) {
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .search-input {
+    width: 10rem;
+    padding: 10px;
+    font-size: 10px;
+  }
+
+  .search-buttons button {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  .language-options {
+    margin-top: 20px;
+    font-size: 8px;
+  }
+  .language-options a {
+    margin-right: 5px;
+    font-size: 8px;
+  }
+
+  .google-footer {
+    flex-wrap: wrap;
+  }
+
+  .google-footer a {
+    font-size: 10px;
+    margin-left: 0.3rem;
+  }
+  .footer-up {
+    padding: 0.4rem;
+    font-size: 10px;
+  }
+
+  .footer-down {
+    justify-content: space-around;
+    padding: 1rem;
+  }
 }

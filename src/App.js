@@ -21,7 +21,6 @@ export default App;
 function Header() {
   return (
     <header className="google-header">
-      <div className="google-logo"></div>
       <div className="google-menu">
         <span>
           <a href="https://mail.google.com/mail/&ogbl">Gmail</a>
@@ -107,15 +106,20 @@ function SearchBox() {
 function Footer() {
   return (
     <footer className="google-footer">
-      <div className="footer-left">Uganda</div>
-      <div className="footer-right">
-        <a href="/">About</a>
-        <a href="/">Advertising</a>
-        <a href="/">Business</a>
-        <a href="/">How Search works</a>
-        <a href="/">Privacy</a>
-        <a href="/">Terms</a>
-        <a href="/">Settings</a>
+      <div className="footer-up">Uganda</div>
+      <div className="footer-down">
+        <div className="footer-left">
+          <a href="/">About</a>
+          <a href="/">Advertising</a>
+          <a href="/">Business</a>
+          <a href="/">How Search works</a>
+        </div>
+
+        <div className="footer-right">
+          <a href="/">Privacy</a>
+          <a href="/">Terms</a>
+          <a href="/">Settings</a>
+        </div>
       </div>
     </footer>
   );
